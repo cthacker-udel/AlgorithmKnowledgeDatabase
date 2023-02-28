@@ -1,0 +1,43 @@
+.home_page_main {
+    height: fit-content;
+    width: fit-content;
+    align-self: center;
+    font-size: 2em;
+    font-weight: 800;
+    flex-direction: column;
+    display: flex;
+    gap: 1em;
+}
+
+.home_page_subtitles {
+    display: flex;
+    flex-direction: column;
+}
+
+.home_page_title {
+    text-align: center;
+}
+
+.home_page_subtitle {
+    font-size: 0.5em;
+    color: rgba(0, 0, 0, 0.35);
+    align-self: center;
+}
+
+.home_page_footer_title {
+    font-size: 0.75em;
+    color: rgba(0, 0, 0, 0.55);
+    margin-top: 1em;
+    align-self: center;
+}
+
+.home_page_footer_items {
+    display: flex;
+    flex-direction: row;
+}
+
+.home_page_footer_graph_algos {
+    padding: 0.5em;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 0.75em;
+}
