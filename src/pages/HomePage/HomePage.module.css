@@ -34,10 +34,29 @@
 .home_page_footer_items {
     display: flex;
     flex-direction: row;
+    gap: 2em;
 }
 
 .home_page_footer_graph_algos {
     padding: 0.5em;
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 0.75em;
+    cursor: pointer;
+    transition: background-color 1s ease-in-out;
+}
+
+.home_page_footer_graph_algos:hover {
+    background-color: rgba(0, 200, 200, 0.25);
+}
+
+.home_page_footer_greedy_algos {
+    padding: 0.5em;
+    border: 1px solid rgba(0, 200, 0, 0.25);
+    border-radius: 0.75em;
+    cursor: pointer;
+    transition: background-color 1s ease-in-out;
+}
+
+.home_page_footer_greedy_algos:hover {
+    background-color: rgba(0, 200, 0, 0.25);
 }
