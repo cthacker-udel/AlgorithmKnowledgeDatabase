@@ -9,6 +9,8 @@ import { renderTooltip } from "@/helpers";
 import { useBackground } from "@/hooks/useBackground";
 
 import styles from "./HomePage.module.css";
+import { Layout } from "@/common";
+import { TextConstants } from "@/assets";
 
 /**
  * The HomePage component
@@ -37,24 +39,20 @@ const HomePage: () => JSX.Element = (): JSX.Element => {
     );
 
     return (
-        <div className={styles.home_page_main}>
+        <Layout customLayoutStyle={styles.home_page_main}>
             <span className={styles.home_page_title}>
-                {"Algorithm Knowledge Database"}
+                {TextConstants.HOME_PAGE.TITLE}
             </span>
             <span className={styles.home_page_subtitles}>
                 <span className={styles.home_page_subtitle}>
-                    {
-                        "Collection of the algorithms I've understood while learning Computer Science."
-                    }
+                    {TextConstants.HOME_PAGE.SUBTITLE_1}
                 </span>
                 <span className={styles.home_page_subtitle}>
-                    {
-                        "I will be adding algorithms to this page as I learn them!"
-                    }
+                    {TextConstants.HOME_PAGE.SUBTITLE_2}
                 </span>
             </span>
             <span className={styles.home_page_footer_title}>
-                {"Choose one of the sections below to learn more!"}
+                {TextConstants.HOME_PAGE.FOOTER_TITLE}
             </span>
             <div className={styles.home_page_footer_items}>
                 <span>
@@ -232,7 +230,7 @@ const HomePage: () => JSX.Element = (): JSX.Element => {
                     </OverlayTrigger>
                 </span>
             </div>
-        </div>
+        </Layout>
     );
 };
 

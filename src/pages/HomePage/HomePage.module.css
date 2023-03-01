@@ -1,11 +1,6 @@
 .home_page_main {
-    height: fit-content;
-    width: fit-content;
-    align-self: center;
     font-size: 2em;
     font-weight: 800;
-    flex-direction: column;
-    display: flex;
     gap: 1em;
     padding: 2em;
     border: 1px solid rgba(0, 0, 0, 0.25);

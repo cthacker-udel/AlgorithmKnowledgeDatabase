@@ -13,15 +13,6 @@ const Home = (): JSX.Element => (
     <>
         <Head>
             <title>{"Knowledge Tracker"}</title>
-            <meta
-                content="App to track algorithm knowledge, and point to repos where that knowledge is present"
-                name="description"
-            />
-            <meta
-                content="width=device-width, initial-scale=1"
-                name="viewport"
-            />
-            <link href="/favicon.ico" rel="icon" />
         </Head>
         <main className={styles.main_page}>
             <HomePage />

@@ -1,0 +1,50 @@
+.graph_main {
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.55);
+    gap: 2em;
+    width: 50vw;
+}
+
+.graph_title {
+    font-size: 1.5em;
+    font-weight: 800;
+    text-align: center;
+}
+
+.graph_accordion {
+    width: 100%;
+}
+
+.graph_accordion_body {
+    width: 100%;
+    padding: 1em;
+}
+
+.graph_accordion_header {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
+
+.graph_accordion_header > i {
+    align-self: center;
+    transition: color 1s ease-in-out;
+}
+
+.graph_accordion_header > i:hover {
+    color: blue;
+}
+
+.graph_accordion_title {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.graph_github_icon {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}

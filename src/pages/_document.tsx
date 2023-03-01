@@ -29,6 +29,7 @@ const Document = (): JSX.Element => (
                 integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
                 rel="stylesheet"
             />
+            <link href="/ico.webp" rel="icon" />
         </Head>
         <body>
             <Main />
