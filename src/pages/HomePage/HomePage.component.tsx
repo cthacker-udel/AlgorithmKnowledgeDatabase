@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-floating-promises -- disabled for router */
+import { useRouter } from "next/router";
 import React from "react";
 import { OverlayTrigger } from "react-bootstrap";
 import { type OverlayInjectedProps } from "react-bootstrap/esm/Overlay";
@@ -24,6 +26,15 @@ const HomePage: () => JSX.Element = (): JSX.Element => {
     const [rotateFindingAlgorithms, setRotateFindingAlgorithms] =
         React.useState<boolean>(false);
     useBackground(HomePageBackground);
+
+    const router = useRouter();
+
+    const redirect = React.useCallback(
+        (link: string) => {
+            router.push(link);
+        },
+        [router],
+    );
 
     return (
         <div className={styles.home_page_main}>
@@ -57,6 +68,9 @@ const HomePage: () => JSX.Element = (): JSX.Element => {
                     >
                         <div
                             className={`${styles.home_page_footer_icon} ${styles.home_page_footer_graph_algos} shadow-lg`}
+                            onClick={(): void => {
+                                redirect("algorithms/graph");
+                            }}
                             onMouseEnter={(): void => {
                                 setRotateNodes(true);
                             }}
@@ -83,6 +97,9 @@ const HomePage: () => JSX.Element = (): JSX.Element => {
                     >
                         <div
                             className={`${styles.home_page_footer_icon} ${styles.home_page_footer_greedy_algos} shadow-lg`}
+                            onClick={(): void => {
+                                redirect("greedy-algorithms");
+                            }}
                             onMouseEnter={(): void => {
                                 setRotateGreedy(true);
                             }}
@@ -109,6 +126,9 @@ const HomePage: () => JSX.Element = (): JSX.Element => {
                     >
                         <div
                             className={`${styles.home_page_footer_icon} ${styles.home_page_footer_dynamic_programming} shadow-lg`}
+                            onClick={(): void => {
+                                redirect("dynamic-programming");
+                            }}
                             onMouseEnter={(): void => {
                                 setRotateDP(true);
                             }}
@@ -135,6 +155,9 @@ const HomePage: () => JSX.Element = (): JSX.Element => {
                     >
                         <div
                             className={`${styles.home_page_footer_icon} ${styles.home_page_footer_beginner_algorithms} shadow-lg`}
+                            onClick={(): void => {
+                                redirect("beginner-algorithms");
+                            }}
                             onMouseEnter={(): void => {
                                 setRotateBeginnerAlgos(true);
                             }}
@@ -161,6 +184,9 @@ const HomePage: () => JSX.Element = (): JSX.Element => {
                     >
                         <div
                             className={`${styles.home_page_footer_icon} ${styles.home_page_footer_sorting_algorithms} shadow-lg`}
+                            onClick={(): void => {
+                                redirect("sorting-algorithms");
+                            }}
                             onMouseEnter={(): void => {
                                 setRotateSortingAlgos(true);
                             }}
@@ -187,6 +213,9 @@ const HomePage: () => JSX.Element = (): JSX.Element => {
                     >
                         <div
                             className={`${styles.home_page_footer_icon} ${styles.home_page_footer_finding_algorithms} shadow-lg`}
+                            onClick={(): void => {
+                                redirect("finding-algorithms");
+                            }}
                             onMouseEnter={(): void => {
                                 setRotateFindingAlgorithms(true);
                             }}

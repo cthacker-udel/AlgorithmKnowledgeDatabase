@@ -1,1 +1,4 @@
-export { setBackground } from "./setBackground";
+export {
+    setBackground,
+    type SetBackgroundConfiguration,
+} from "./setBackground";
