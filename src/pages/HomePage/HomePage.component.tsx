@@ -96,7 +96,7 @@ const HomePage: () => JSX.Element = (): JSX.Element => {
                         <div
                             className={`${styles.home_page_footer_icon} ${styles.home_page_footer_greedy_algos} shadow-lg`}
                             onClick={(): void => {
-                                redirect("greedy-algorithms");
+                                redirect("algorithms/greedy");
                             }}
                             onMouseEnter={(): void => {
                                 setRotateGreedy(true);
