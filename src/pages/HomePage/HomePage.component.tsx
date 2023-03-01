@@ -2,7 +2,9 @@ import React from "react";
 import { OverlayTrigger } from "react-bootstrap";
 import { type OverlayInjectedProps } from "react-bootstrap/esm/Overlay";
 
+import HomePageBackground from "@/assets/backgrounds/HomePage/bg4.gif";
 import { renderTooltip } from "@/helpers";
+import { useBackground } from "@/hooks/useBackground";
 
 import styles from "./HomePage.module.css";
 
@@ -14,6 +16,14 @@ import styles from "./HomePage.module.css";
 const HomePage: () => JSX.Element = (): JSX.Element => {
     const [rotateNodes, setRotateNodes] = React.useState<boolean>(false);
     const [rotateGreedy, setRotateGreedy] = React.useState<boolean>(false);
+    const [rotateDP, setRotateDP] = React.useState<boolean>(false);
+    const [rotateBeginnerAlgos, setRotateBeginnerAlgos] =
+        React.useState<boolean>(false);
+    const [rotateSortingAlgos, setRotateSortingAlgos] =
+        React.useState<boolean>(false);
+    const [rotateFindingAlgorithms, setRotateFindingAlgorithms] =
+        React.useState<boolean>(false);
+    useBackground(HomePageBackground);
 
     return (
         <div className={styles.home_page_main}>
@@ -46,7 +56,7 @@ const HomePage: () => JSX.Element = (): JSX.Element => {
                         placement="bottom"
                     >
                         <div
-                            className={styles.home_page_footer_graph_algos}
+                            className={`${styles.home_page_footer_icon} ${styles.home_page_footer_graph_algos} shadow-lg`}
                             onMouseEnter={(): void => {
                                 setRotateNodes(true);
                             }}
@@ -72,7 +82,7 @@ const HomePage: () => JSX.Element = (): JSX.Element => {
                         placement="bottom"
                     >
                         <div
-                            className={styles.home_page_footer_greedy_algos}
+                            className={`${styles.home_page_footer_icon} ${styles.home_page_footer_greedy_algos} shadow-lg`}
                             onMouseEnter={(): void => {
                                 setRotateGreedy(true);
                             }}
@@ -83,6 +93,110 @@ const HomePage: () => JSX.Element = (): JSX.Element => {
                             <i
                                 className={`fa-solid fa-money-bill fa-md ${
                                     rotateGreedy ? "fa-shake" : ""
+                                }`}
+                            />
+                        </div>
+                    </OverlayTrigger>
+                </span>
+                <span>
+                    <OverlayTrigger
+                        overlay={(
+                            properties: OverlayInjectedProps,
+                        ): JSX.Element =>
+                            renderTooltip(properties, "Dynamic Programming")
+                        }
+                        placement="bottom"
+                    >
+                        <div
+                            className={`${styles.home_page_footer_icon} ${styles.home_page_footer_dynamic_programming} shadow-lg`}
+                            onMouseEnter={(): void => {
+                                setRotateDP(true);
+                            }}
+                            onMouseLeave={(): void => {
+                                setRotateDP(false);
+                            }}
+                        >
+                            <i
+                                className={`fa-solid fa-recycle ${
+                                    rotateDP ? "fa-spin" : ""
+                                }`}
+                            />
+                        </div>
+                    </OverlayTrigger>
+                </span>
+                <span>
+                    <OverlayTrigger
+                        overlay={(
+                            properties: OverlayInjectedProps,
+                        ): JSX.Element =>
+                            renderTooltip(properties, "Beginner Algorithms")
+                        }
+                        placement="bottom"
+                    >
+                        <div
+                            className={`${styles.home_page_footer_icon} ${styles.home_page_footer_beginner_algorithms} shadow-lg`}
+                            onMouseEnter={(): void => {
+                                setRotateBeginnerAlgos(true);
+                            }}
+                            onMouseLeave={(): void => {
+                                setRotateBeginnerAlgos(false);
+                            }}
+                        >
+                            <i
+                                className={`fa-solid fa-egg ${
+                                    rotateBeginnerAlgos ? "fa-bounce" : ""
+                                }`}
+                            />
+                        </div>
+                    </OverlayTrigger>
+                </span>
+                <span>
+                    <OverlayTrigger
+                        overlay={(
+                            properties: OverlayInjectedProps,
+                        ): JSX.Element =>
+                            renderTooltip(properties, "Sorting Algorithms")
+                        }
+                        placement="bottom"
+                    >
+                        <div
+                            className={`${styles.home_page_footer_icon} ${styles.home_page_footer_sorting_algorithms} shadow-lg`}
+                            onMouseEnter={(): void => {
+                                setRotateSortingAlgos(true);
+                            }}
+                            onMouseLeave={(): void => {
+                                setRotateSortingAlgos(false);
+                            }}
+                        >
+                            <i
+                                className={`fa-solid fa-arrow-up-z-a ${
+                                    rotateSortingAlgos ? "fa-beat" : ""
+                                }`}
+                            />
+                        </div>
+                    </OverlayTrigger>
+                </span>
+                <span>
+                    <OverlayTrigger
+                        overlay={(
+                            properties: OverlayInjectedProps,
+                        ): JSX.Element =>
+                            renderTooltip(properties, "Finding Algorithms")
+                        }
+                        placement="bottom"
+                    >
+                        <div
+                            className={`${styles.home_page_footer_icon} ${styles.home_page_footer_finding_algorithms} shadow-lg`}
+                            onMouseEnter={(): void => {
+                                setRotateFindingAlgorithms(true);
+                            }}
+                            onMouseLeave={(): void => {
+                                setRotateFindingAlgorithms(false);
+                            }}
+                        >
+                            <i
+                                className={`fa-solid fa-magnifying-glass ${
+                                    rotateFindingAlgorithms ? "fa-bounce" : ""
                                 }`}
                             />
                         </div>
